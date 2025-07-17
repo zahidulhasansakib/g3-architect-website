@@ -98,6 +98,45 @@ main{
  #quick{
     font-weight: 500;
  }
+ /* feature section style */
+ #feature-section-title{
+    border-left: 5px solid #FF900E ;
+    padding-left: 20px;
+ }
+ .features  {
+    gap: 140px;
+ }
+ .featured-card{
+        box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.1);
+         padding: 30px;
+         margin-bottom: 20px;
+         border-radius: 8px ;
+
+ }
+ .featured-architect img{
+    width: 100%;
+ }
+ #experience-badge{
+    padding: 45px 42px;
+    font-size:1.5rem ;
+    font-weight: 500;
+    margin-left: -100px;
+    margin-top: -100px;
+ }
+ #experience-year{
+    font-size: 4rem;
+    font-weight: bold;
+ }
+
+ .feature-card ,.feature-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+   
+
+   
+ }
 
  /* some fact style */
 
@@ -131,19 +170,48 @@ main{
     max-width:540px ;
 }
 
+/* sponsor style
+ */
+
+ .sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+ }
+ .sponsor-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+ }
+ .sponsor-company img{
+    filter: grayscale(100%);
+ }
+
 /* responsive media query */
 @media screen  and (max-width:576px){
     .navbar, 
     .nav-links,
-    .teams{
+    .teams,
+    .features{
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container,
+     .facts-container,
+     .sponsor-company
+     {
         grid-template-columns: repeat(1,1fr);
     }
     .our-feature{
         margin-left: 20px;
     }
+    .facts-container,.sponsor-company{
+        justify-items: center;
+        gap: 24px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    
 
 }
 
@@ -151,11 +219,21 @@ main{
 
 @media screen and (min-width:576px) and (max-width:992px){
 
-    .teams{
+    .teams,.features{
         flex-direction: column;
     }
     .our-feature{
         margin-left: 50px;
     }
-    
+    .sponsor-company,.facts-container{
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+    .facts-container{
+        gap: 24px;
+    }
+    #experience-badge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 }
